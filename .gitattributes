@@ -1,0 +1,132 @@
+# Why do you want this ?
+# Because Git will see diffs between files shared between Linux and Windows
+# due to differences in line ending handling ( Windows uses CRLF and Unix LF)
+
+# There is a convenient collection of ready to use .gitattributes
+# files for the most popular programming languages.
+# It's useful to get you started
+# from Danial Jomphe (https://stackoverflow.com/a/10855862)
+# and ajdruff/fix-git-line-endings
+# https://gist.github.com/ajdruff/16427061a41ca8c08c05992a6c74f59e
+
+
+
+# Auto detect text files and perform LF normalization
+*        text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+# (Convert crlf => lf)
+*.cs     text diff=csharp
+*.java   text diff=java
+*.html   text diff=html
+*.css    text
+*.js     text
+*.jsx    text
+*.yml    text
+*.sql    text
+*.md     text
+
+*.php text
+*.json text
+*.htm text
+*.xml text
+*.txt text
+*.ini text
+*.inc text
+*.pl text
+*.rb text
+*.py text
+*.scm text
+.htaccess text
+
+*.sh text
+
+*.csproj text merge=union
+*.sln    text merge=union eol=crlf
+
+*.docx   diff=astextplain
+*.DOCX   diff=astextplain
+
+# absolute paths are ok, as are globs
+/**/postinst* text eol=lf
+
+# paths that don't start with / are treated relative to the .gitattributes folder
+relative/path/*.txt text eol=lf
+
+# Basic .gitattributes for a R repo.
+
+# Source files
+# ============
+*.Rdata binary
+*.RData binary
+*.rda   binary
+*.rdb   binary
+*.rds   binary
+*.Rd    text
+*.Rdx   binary
+*.Rmd	  text
+*.R  	  text
+*.Rproj text
+*.[Rr]md   linguist-detectable
+
+# Basic .gitattributes for a python repo.
+
+# Source files
+# ============
+*.pxd    text diff=python
+*.py     text diff=python
+*.py3    text diff=python
+*.pyw    text diff=python
+*.pyx    text diff=python
+*.pyz    text diff=python
+*.pyi    text diff=python
+
+# Binary files
+# ============
+*.db     binary
+*.p      binary
+*.pkl    binary
+*.pickle binary
+*.pyc    binary export-ignore
+*.pyo    binary export-ignore
+*.pyd    binary
+
+# Jupyter notebook
+*.ipynb  text
+
+# Note: .db, .p, and .pkl files are associated
+# with the python modules ``pickle``, ``dbm.*``,
+# ``shelve``, ``marshal``, ``anydbm``, & ``bsddb``
+# (among others).
+
+#####
+# Auto detect text files and perform LF normalization
+* text=auto
+* text eol=lf
+
+# Don't do anything with binaries
+*.png binary
+*.jpg binary
+*.svg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.pyc binary
+*.pdf binary
+*.ez binary
+*.bz2 binary
+*.swp binary
+*.webp binary
