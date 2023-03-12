@@ -22,9 +22,15 @@ for i in range(num_steps):
 
 ## Set up and Run
 
-```python
+#### Python
+```bash
 pip install numpy networkx
 python3 graph_infection_method.py
+```
+
+#### R Lang
+```bash
+Rscript graph_infection_method.r
 ```
 
 ## Publication
