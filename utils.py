@@ -1,7 +1,6 @@
 import networkx as nx
 import numpy as np
 import numpy.linalg as LA
-import matplotlib.pyplot as plt
 
 
 def adj_mat_ground_truth(G, input_is_matrix=False):
@@ -112,32 +111,3 @@ def get_abs_angle(angle):
     dist_to_0 = abs(angle - 0)
     return min(dist_to_180, dist_to_0)
 
-
-def draw_with_options(G):
-    options = {
-        "font_size": 15,
-        "node_size": 500,
-        "node_color": "white",
-        "edgecolors": "black",
-    #     "linewidths": 5,
-    #     "width": 5,
-    }
-    nx.draw(G, with_labels=True, **options)
-    plt.show()
-    nx.draw_circular(G, with_labels=True, **options)
-    plt.show()
-
-    pos = nx.spring_layout(G)
-    nodes = nx.draw_networkx_nodes(
-        G,
-        pos,
-        # node_color="indigo"
-    )
-    edges = nx.draw_networkx_edges(
-        G,
-        pos,
-        arrowstyle="->",
-        arrowsize=10,
-        width=2,
-    )
-    plt.show()
