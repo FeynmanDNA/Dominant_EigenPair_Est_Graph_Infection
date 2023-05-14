@@ -35,6 +35,10 @@ Rscript graph_infection_method.r
 
 ## Publication
 
+Research paper accepted by **[Proc. 16th International Conference on Graph Transformation (ICGT 2023), Leicester, UK](https://conf.researchr.org/details/icgt-2023/icgt-2023-papers/4/Dominant-Eigenvalue-Eigenvector-Pair-Estimation-via-Graph-Infection)**.
+
+Extended abstract accepted by the Graph Signal Processing (GSP) Workshop 2023, Oxford, UK
+
 Please see our arvix paper for more details: 
 [Arvix https://arxiv.org/abs/2208.00982](https://arxiv.org/abs/2208.00982)
 
